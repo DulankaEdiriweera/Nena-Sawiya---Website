@@ -11,12 +11,11 @@ const LiteratureReview = () => {
 
         <div className="grid-2">
           <div>
-            <div className="image-box">
+            <div className="method-img">
               <img src={Chart} alt="Learning Dsiabilities" />
-              <p className="caption">
-                Different types of Learning Disabilities
-              </p>
             </div>
+            <br></br>
+            <p className="caption">Different types of Learning Disabilities</p>
           </div>
 
           <div>
