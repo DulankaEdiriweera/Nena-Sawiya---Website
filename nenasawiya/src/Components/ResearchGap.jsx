@@ -1,5 +1,13 @@
 import React from "react";
 import "../css/ProjectScope.css";
+import {
+  FaBrain,
+  FaClipboardCheck,
+  FaCogs,
+  FaLayerGroup,
+  FaGlobe,
+  FaLanguage,
+} from "react-icons/fa";
 
 const ResearchGap = () => {
   return (
@@ -15,6 +23,7 @@ const ResearchGap = () => {
 
         <div className="grid-3">
           <div className="card">
+            <FaBrain className="card-icon" />
             <h4>Identification & Classification</h4>
             <p>
               There is a lack of intelligent and automated systems for
@@ -27,6 +36,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
+            <FaClipboardCheck className="card-icon" />
             <h4>Assessment Methods</h4>
             <p>
               Current assessment methods heavily rely on traditional paper-based
@@ -38,6 +48,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
+            <FaCogs className="card-icon" />
             <h4>Integrated Solutions</h4>
             <p>
               Most existing systems focus on either assessment or intervention,
@@ -50,6 +61,7 @@ const ResearchGap = () => {
         <br />
         <div className="grid-3">
           <div className="card">
+            <FaLayerGroup className="card-icon" />
             <h4>Multi-domain Coverage</h4>
             <p>
               Existing solutions do not effectively address multiple learning
@@ -60,6 +72,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
+            <FaGlobe className="card-icon" />
             <h4>Accessibility & Scalability</h4>
             <p>
               There is limited availability of accessible and scalable digital
@@ -70,6 +83,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
+            <FaLanguage className="card-icon" />
             <h4>Cultural Adaptation</h4>
             <p>
               Most existing digital platforms are not culturally adapted to the

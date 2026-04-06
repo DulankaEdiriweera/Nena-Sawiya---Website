@@ -46,6 +46,7 @@
   border: 3px solid #ffcc00; /* YELLOW */
   transition: 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .card:hover {
@@ -205,4 +206,11 @@
 
 p {
   text-align: justify;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #0b1f3a; /* navy blue */
+  margin-bottom: 10px;
+  text-align: center;
 }
