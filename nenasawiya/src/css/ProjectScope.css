@@ -39,16 +39,19 @@
 
 /* Cards */
 .card {
-  background: #0b1f3a; /* DARK BLUE */
-  color: #ffffff; /* WHITE text */
+  background: #ffffff; /* DARK BLUE */
+  color: #0b1f3a; /* WHITE text */
   padding: 15px;
-  border-radius: 10px;
-  border: 2px solid #ffcc00; /* YELLOW */
+  border-radius: 20px;
+  border: 3px solid #ffcc00; /* YELLOW */
   transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Images */
@@ -68,13 +71,15 @@
 .method-img {
   width: 100%;
   border-radius: 10px;
-  border: 3px solid #ffcc00;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* border: 3px solid #ffcc00; */
 }
 
 /* Caption */
 .caption {
   font-size: 12px;
   color: #555; /* soft gray for readability */
+  text-align: center;
 }
 
 /* Highlight text */
@@ -86,26 +91,30 @@
 /* Technologies */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
 /* Tech cards */
 .tech-card {
-  background: #ffffff; /* WHITE */
-  color: #0b1f3a; /* DARK BLUE */
-  border: 2px solid #ffcc00; /* YELLOW */
-  padding: 12px;
+  background: #fff;
+  padding: 20px;
+  color: #555;
   text-align: center;
-  border-radius: 10px;
-  font-weight: 500;
-  transition: 0.3s;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tech-card:hover {
-  background: #0b1f3a; /* DARK BLUE */
-  color: #ffffff; /* WHITE */
   transform: scale(1.05);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 /* Timeline */
@@ -146,11 +155,11 @@
 
 /* Content */
 .content {
-  background: #0b1f3a; /* DARK BLUE */
-  color: #ffffff; /* WHITE */
+  background: #ffffff; /* DARK BLUE */
+  color: #0b1f3a; /* WHITE */
   padding: 15px;
   border-radius: 10px;
-  border: 2px solid #ffcc00; /* YELLOW */
+  border: 3px solid #ffcc00; /* YELLOW */
 }
 
 /* Dots */
@@ -197,4 +206,11 @@
 
 p {
   text-align: justify;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #0b1f3a; /* navy blue */
+  margin-bottom: 10px;
+  text-align: center;
 }
