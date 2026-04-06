@@ -10,8 +10,8 @@ import slide3 from "../assets/HomePage/slide3.png";
 import slide3Hover from "../assets/HomePage/slide3Hover.png";
 import slide4 from "../assets/HomePage/slide4.jpeg";
 import slide4Hover from "../assets/HomePage/slide4Hover.jpeg";
-// import slide5 from "../assets/HomePage/slide5.png";
-// import slide5Hover from "../assets/HomePage/slide5-hover.png";
+import slide5 from "../assets/HomePage/slide5.jpeg";
+import slide5Hover from "../assets/HomePage/slide5-hover.jpeg";
 
 const slides = [
   {
@@ -47,15 +47,15 @@ const slides = [
     subtitle: "NENA SAWIYA",
     description: "Visual Closure Deficits Detection and Intervention .",
   },
-  // ✅ SLIDE 5 — uncomment and fill in when ready
-  // {
-  //   base: slide5,
-  //   hover: slide5Hover,
-  //   label: "Research Project",
-  //   title: "නැණ සවිය",
-  //   subtitle: "Your Slide 5 Subtitle",
-  //   description: "Your slide 5 description text here.",
-  // },
+  {
+    base: slide5,
+    hover: slide5Hover,
+    label: "Research Project",
+    title: "නැණ සවිය",
+    subtitle: "NENA SAWIYA",
+    description:
+      "Visual Discrimination and memory Difficulties Detection and Intervention .",
+  },
 ];
 
 export default function Home() {

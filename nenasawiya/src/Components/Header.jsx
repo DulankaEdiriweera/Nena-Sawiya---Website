@@ -106,7 +106,7 @@ export default function Header() {
               )}
             </div>
 
-            <Link to="/milestones" className="nav__link">
+            <Link smooth to="#milestones" className="nav__link">
               Milestones
             </Link>
             <Link to="/documents" className="nav__link">
