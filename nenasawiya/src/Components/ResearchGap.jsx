@@ -1,5 +1,13 @@
 import React from "react";
 import "../css/ProjectScope.css";
+import {
+  FaBrain,
+  FaClipboardCheck,
+  FaCogs,
+  FaLayerGroup,
+  FaGlobe,
+  FaLanguage,
+} from "react-icons/fa";
 
 const ResearchGap = () => {
   return (
@@ -15,7 +23,9 @@ const ResearchGap = () => {
 
         <div className="grid-3">
           <div className="card">
-            <h4>Identification & Classification</h4>
+            <FaBrain className="card-icon" />
+            <h3>Identification & Classification</h3>
+            <br />
             <p>
               There is a lack of intelligent and automated systems for
               identifying and classifying learning difficulties such as Visual
@@ -27,7 +37,9 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <h4>Assessment Methods</h4>
+            <FaClipboardCheck className="card-icon" />
+            <h3>Assessment Methods</h3>
+            <br />
             <p>
               Current assessment methods heavily rely on traditional paper-based
               techniques that require trained professionals and do not provide
@@ -38,7 +50,9 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <h4>Integrated Solutions</h4>
+            <FaCogs className="card-icon" />
+            <h3>Integrated Solutions</h3>
+            <br />
             <p>
               Most existing systems focus on either assessment or intervention,
               but not both. There is an absence of integrated platforms that
@@ -50,7 +64,8 @@ const ResearchGap = () => {
         <br />
         <div className="grid-3">
           <div className="card">
-            <h4>Multi-domain Coverage</h4>
+            <FaLayerGroup className="card-icon" />
+            <h3>Multi-domain Coverage</h3><br />
             <p>
               Existing solutions do not effectively address multiple learning
               domains such as visual processing and language-related
@@ -60,7 +75,9 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <h4>Accessibility & Scalability</h4>
+            <FaGlobe className="card-icon" />
+            <h3>Accessibility & Scalability</h3>
+            <br />
             <p>
               There is limited availability of accessible and scalable digital
               solutions tailored for Sinhala-speaking students, particularly in
@@ -70,7 +87,9 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <h4>Cultural Adaptation</h4>
+            <FaLanguage className="card-icon" />
+            <h3>Cultural Adaptation</h3>
+            <br />
             <p>
               Most existing digital platforms are not culturally adapted to the
               Sri Lankan education system and Sinhala language, reducing their

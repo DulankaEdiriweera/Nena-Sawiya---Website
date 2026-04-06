@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/ProjectScope.css";
+import Chart from "../assets/Chart.jpeg";
 
 const LiteratureReview = () => {
   return (
@@ -10,24 +11,11 @@ const LiteratureReview = () => {
 
         <div className="grid-2">
           <div>
-            <div className="card">
-              <img src="/images/lit1.jpg" alt="Tomato" />
-              <p>
-                Tomato cultivation faces yield variability due to climate stress
-                and diseases. Predictive analytics helps optimize planting and
-                improve farmer income.
-              </p>
+            <div className="method-img">
+              <img src={Chart} alt="Learning Dsiabilities" />
             </div>
-
-            <div className="image-box">
-              <img src="/images/lit2.jpg" alt="Growth" />
-              <p className="caption">Tomato production growth</p>
-            </div>
-
-            <div className="image-box">
-              <img src="/images/lit3.jpg" alt="Market" />
-              <p className="caption">Global tomato market size</p>
-            </div>
+            <br></br>
+            <p className="caption">Different types of Learning Disabilities</p>
           </div>
 
           <div>
