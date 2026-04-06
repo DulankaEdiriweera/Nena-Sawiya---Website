@@ -14,12 +14,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.80);
   transition: opacity 0.5s ease;
 }
 
 .home__img--hover {
-  filter: brightness(0.75);
+  filter: brightness(1.00);
   pointer-events: none;
   transition: clip-path 75ms ease, opacity 0.5s ease;
 }

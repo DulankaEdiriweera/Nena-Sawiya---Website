@@ -1,20 +1,21 @@
+// src/Components/Header.jsx
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../assets/HomePage/Logo.png";
 import "../css/Header.css";
 
 const projectScopeItems = [
-  { label: "Literature Survey", to: "/scope/literature-survey" },
-  { label: "Research Gap", to: "/scope/research-gap" },
-  { label: "Research Problem & Solution", to: "/scope/problem-solution" },
-  { label: "Research Objectives", to: "/scope/objectives" },
-  { label: "Methodology", to: "/scope/methodology" },
-  { label: "Technologies", to: "/scope/technologies" },
+  { label: "Literature Survey", to: "/scope#literature-review" },
+  { label: "Research Gap", to: "/scope#research-gap" },
+  { label: "Research Problem & Solution", to: "/scope#research-problem" },
+  { label: "Research Objectives", to: "/scope#research-objectives" },
+  { label: "Methodology", to: "/scope#methodology" },
+  { label: "Technologies", to: "/scope#technologies" },
 ];
 
 const aboutUsItems = [
-  { label: "Supervisors", to: "/about/supervisors" },
-  { label: "Team Members", to: "/about/team" },
+  { label: "Supervisors", to: "/about#supervisors" },
+  { label: "Team Members", to: "/about#team" },
 ];
 
 export default function Header() {
@@ -61,7 +62,7 @@ export default function Header() {
               Home
             </Link>
 
-            {/* Project Scope dropdown */}
+            {/* Project Scope Dropdown */}
             <div
               className="nav__dropdown"
               onMouseEnter={() => handleMouseEnter("scope")}
@@ -93,6 +94,7 @@ export default function Header() {
                   {projectScopeItems.map((item) => (
                     <Link
                       key={item.to}
+                      smooth
                       to={item.to}
                       onClick={() => setOpenMenu(null)}
                       className="nav__dropdown-item"
@@ -117,7 +119,7 @@ export default function Header() {
               Achievements
             </Link>
 
-            {/* About Us dropdown */}
+            {/* About Us Dropdown */}
             <div
               className="nav__dropdown"
               onMouseEnter={() => handleMouseEnter("about")}
@@ -149,6 +151,7 @@ export default function Header() {
                   {aboutUsItems.map((item) => (
                     <Link
                       key={item.to}
+                      smooth
                       to={item.to}
                       onClick={() => setOpenMenu(null)}
                       className="nav__dropdown-item"
@@ -160,7 +163,7 @@ export default function Header() {
               )}
             </div>
 
-            <Link to="/contact" className="nav__link">
+            <Link smooth to="#contact-us" className="nav__link">
               Contact Us
             </Link>
           </nav>
