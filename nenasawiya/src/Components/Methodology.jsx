@@ -20,14 +20,24 @@ const Methodology = () => {
               The proposed system, Nena Sawiya, is structured around four main
               components:
             </p>
-            <ol>
-              <li>
-                Visual Discrimination and Memory Detection and Intervention
-              </li>
-              <li>Visual Closure Deficit Detection and Intervention</li>
-              <li>Expressive Language Assessment (ELD)</li>
-              <li>Receptive Language Assessment (RLD)</li>
-            </ol>
+
+            <p className="method-p">
+              1. Visual Discrimination and Memory Difficulty Detection and
+              Intervention
+            </p>
+
+            <p className="method-p">
+              2. Visual Closure Deficit Detection and Intervention
+            </p>
+
+            <p className="method-p">
+              3. Expressive Language Difficulty Detection and Intervention
+            </p>
+
+            <p className="method-p">
+              4. Receptive Language Difficulty Detection and Intervention
+            </p>
+            <br/>
 
             <p>
               The proposed system, Nena Sawiya, is structured around four main

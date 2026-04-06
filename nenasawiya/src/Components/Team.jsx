@@ -27,7 +27,7 @@ const Team = () => {
 
         {/* Add more members here */}
         <TeamMemberCard
-          name="Member 2"
+          name="Kaluperuma C. D. S"
           image={Member2}
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
@@ -37,7 +37,7 @@ const Team = () => {
         />
 
         <TeamMemberCard
-          name="Member 3"
+          name="Ediriweera D. K"
           image={Member3}
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
@@ -47,7 +47,7 @@ const Team = () => {
         />
 
         <TeamMemberCard
-          name="Member 4"
+          name="Umayangani R. D"
           image={Member4}
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
