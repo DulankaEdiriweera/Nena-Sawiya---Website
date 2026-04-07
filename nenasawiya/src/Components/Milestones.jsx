@@ -160,7 +160,6 @@ export default function Milestones() {
     <section className="milestones-page">
 
       <div className="milestones-header">
-        <span className="label">Project Timeline</span>
         <h1>Milestones in Brief</h1>
       </div>
 

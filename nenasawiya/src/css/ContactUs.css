@@ -68,12 +68,12 @@
   height: 100%;
 }
 
-/* ── GRADIENT BLUE BORDER ── */
+/* ── NAVY BORDER ── */
 .contact-form-card-wrapper,
 .contact-info-card-wrapper {
   border-radius: 14px;
   padding: 3px;
-  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 35%, #6366f1 65%, #38bdf8 100%);
+  background: #1e3a8a;
   display: flex;
   transition: box-shadow 0.3s;
   animation: fadeSlideIn 0.4s ease both;
@@ -81,7 +81,7 @@
 
 .contact-form-card-wrapper:hover,
 .contact-info-card-wrapper:hover {
-  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.35);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.3);
 }
 
 /* ── FORM CARD ── */
@@ -89,14 +89,14 @@
   background: #fff;
   border-radius: 12px;
   padding: 18px;
-  color: #1a1a2e;
+  color: #1e3a8a;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .form-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #0b1f3a;
   margin-bottom: 13px;
@@ -106,7 +106,7 @@
 
 .form-group label {
   display: block;
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
   padding: 8px 11px;
   color: #1a1a2e;
   font-family: Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   outline: none;
   resize: none;
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
@@ -134,42 +134,47 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #2a4a9a;
+  border-color: #0b1f3a;
   background: #f0f6ff;
-  box-shadow: 0 0 0 2px rgba(42, 74, 154, 0.12);
+  box-shadow: 0 0 0 2px rgba(11, 31, 58, 0.12);
 }
 
 .form-group input.error,
 .form-group textarea.error { border-color: #f87171; }
 
+/* ── SUBMIT BUTTON ── */
 .submit-btn {
   width: 100%;
   margin-top: auto;
   padding: 9px;
-  background: linear-gradient(90deg, #0b1f3a, #1a3a8a, #38bdf8);
+  background: #1e3a8a;
   border: none;
   border-radius: 7px;
   color: #fff;
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+  transition: background 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
 }
 
 .submit-btn:hover {
+  background: #1e3a8a;
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 6px 18px rgba(26, 58, 138, 0.3);
+  box-shadow: 0 6px 18px rgba(11, 31, 58, 0.3);
 }
-.submit-btn:active { transform: scale(0.98); }
+.submit-btn:active {
+  transform: scale(0.98);
+  background: #0b1f3a;
+}
 
 /* ── INFO CARD ── */
 .contact-info-card {
   background: #fff;
   border-radius: 12px;
-  color: #1a1a2e;
+  color: #1e3a8a;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -203,13 +208,13 @@
 }
 
 .info-image-badge {
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background: rgba(56, 189, 248, 0.28);
-  border: 1px solid rgba(56, 189, 248, 0.55);
+  background: rgba(11, 31, 58, 0.35);
+  border: 1px solid rgba(11, 31, 58, 0.5);
   border-radius: 4px;
   padding: 3px 8px;
 }
@@ -225,21 +230,21 @@
 }
 
 .info-card-title {
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   font-weight: 800;
   color: #0b1f3a;
   margin-bottom: 1px;
 }
 
 .info-card-sub {
-  font-size: 0.68rem;
+  font-size: 0.71rem;
   color: #9ca3af;
   margin-bottom: 2px;
 }
 
 .info-card-email {
-  font-size: 0.68rem;
-  color: #2a4a9a;
+  font-size: 0.71rem;
+  color: #0b1f3a;
   font-weight: 600;
   margin-bottom: 8px;
   word-break: break-all;
@@ -284,7 +289,7 @@
 .detail-row-icon.purple svg { color: #7c3aed; }
 
 .row-label {
-  font-size: 0.58rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -292,7 +297,7 @@
 }
 
 .row-value {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #0b1f3a;
 }
@@ -305,14 +310,14 @@
 }
 
 .info-message {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   color: #6b7280;
   line-height: 1.55;
   margin-bottom: 1px;
 }
 
 .info-team {
-  font-size: 0.62rem;
+  font-size: 0.65rem;
   color: #9ca3af;
   font-style: italic;
   margin-bottom: 7px;
@@ -333,7 +338,7 @@
 .logo-icon:hover { animation: spinFast 1s linear infinite; }
 
 .logo-name {
-  font-size: 0.7rem;
+  font-size: 0.73rem;
   font-weight: 800;
   color: #0b1f3a;
 }
@@ -353,7 +358,7 @@
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-  color: #2a4a9a;
+  color: #0b1f3a;
   padding: 0;
   outline: none;
 }
@@ -379,16 +384,16 @@
   background: #e0f2fe;
   display: flex; align-items: center; justify-content: center;
 }
-.success-icon svg { width: 22px; height: 22px; color: #0ea5e9; }
-.success-msg h3 { font-size: 0.92rem; font-weight: 800; color: #0b1f3a; }
-.success-msg p  { font-size: 0.72rem; color: #6b7280; line-height: 1.5; }
+.success-icon svg { width: 22px; height: 22px; color: #0b1f3a; }
+.success-msg h3 { font-size: 0.96rem; font-weight: 800; color: #0b1f3a; }
+.success-msg p  { font-size: 0.75rem; color: #6b7280; line-height: 1.5; }
 
 .reset-btn {
   background: #f8fafc;
   border: 1px solid #d1dce8;
   border-radius: 5px; padding: 5px 13px;
-  color: #4b6080;
-  font-family: Arial, sans-serif; font-size: 0.68rem;
+  color: #0b1f3a;
+  font-family: Arial, sans-serif; font-size: 0.71rem;
   cursor: pointer; transition: background 0.2s;
 }
 .reset-btn:hover { background: #e8edf5; }
@@ -415,3 +420,4 @@
   .contact-page { padding: 12px 0 16px; }
   .contact-header { margin-left: 24px; width: calc(100% - 48px); }
 }
+

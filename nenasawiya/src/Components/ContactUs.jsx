@@ -70,6 +70,12 @@ const NenaLogo = () => (
 
 const initialForm = { name: "", email: "", message: "" };
 
+// ── GOOGLE FORM CONFIG ── //
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdRBvySDOeM7VZoeVTwGTX2_mdMmAYKCH_i4WbTE4llBr2gzQ/formResponse";
+const ENTRY_NAME = "entry.424380972";
+const ENTRY_EMAIL = "entry.212350995";
+const ENTRY_MESSAGE = "entry.1184930314";
+
 export default function ContactUs() {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
@@ -88,19 +94,37 @@ export default function ContactUs() {
     setErrors((e) => ({ ...e, [field]: false }));
   };
 
-  const handleSubmit = () => {
+  // ── UPDATED: SUBMIT TO GOOGLE FORM ── //
+  const handleSubmit = async () => {
     const e = validate();
     if (Object.keys(e).length) {
       setErrors(e);
       return;
     }
-    setSubmitted(true);
+
+    // Submit to Google Form
+    const formBody = new URLSearchParams();
+    formBody.append(ENTRY_NAME, form.name);
+    formBody.append(ENTRY_EMAIL, form.email);
+    formBody.append(ENTRY_MESSAGE, form.message);
+
+    try {
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody.toString(),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Form submission failed", err);
+      setSubmitted(true); // still show success
+    }
   };
 
   return (
     <div className="contact-page" id="contact-us">
       <div className="contact-header">
-        <span className="label">Get In Touch</span>
         <h1>Contact Us</h1>
       </div>
 
