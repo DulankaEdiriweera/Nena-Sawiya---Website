@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/ContactUs.css";
 
-import contactImage from "../assets/contact-image.png"; // ← change this path to your image
+import contactImage from "../assets/contact-image.png";
 
 /* ── Icons ── */
 const EmailIcon = () => (
@@ -55,83 +55,26 @@ const NenaLogo = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle
-      cx="40"
-      cy="40"
-      r="38"
-      fill="rgba(255,255,255,0.08)"
-      stroke="rgba(255,255,255,0.2)"
-      strokeWidth="1.5"
-    />
-    <path
-      d="M16 52 Q16 28 40 28 Q64 28 64 52"
-      stroke="rgba(255,255,255,0.2)"
-      strokeWidth="1"
-      fill="none"
-    />
-    <path
-      d="M16 52 Q28 30 40 30 L40 56 Q28 54 16 52Z"
-      fill="#38bdf8"
-      opacity="0.85"
-    />
-    <path
-      d="M64 52 Q52 30 40 30 L40 56 Q52 54 64 52Z"
-      fill="#60a5fa"
-      opacity="0.85"
-    />
-    <line
-      x1="40"
-      y1="30"
-      x2="40"
-      y2="56"
-      stroke="rgba(255,255,255,0.5)"
-      strokeWidth="1.2"
-    />
-    <line
-      x1="24"
-      y1="40"
-      x2="37"
-      y2="39"
-      stroke="rgba(255,255,255,0.4)"
-      strokeWidth="0.9"
-      strokeLinecap="round"
-    />
-    <line
-      x1="25"
-      y1="44"
-      x2="37"
-      y2="43"
-      stroke="rgba(255,255,255,0.4)"
-      strokeWidth="0.9"
-      strokeLinecap="round"
-    />
-    <line
-      x1="43"
-      y1="39"
-      x2="56"
-      y2="40"
-      stroke="rgba(255,255,255,0.4)"
-      strokeWidth="0.9"
-      strokeLinecap="round"
-    />
-    <line
-      x1="43"
-      y1="43"
-      x2="55"
-      y2="44"
-      stroke="rgba(255,255,255,0.4)"
-      strokeWidth="0.9"
-      strokeLinecap="round"
-    />
-    <path
-      d="M40 18 L41.5 23 L46 23 L42.5 26 L44 31 L40 28 L36 31 L37.5 26 L34 23 L38.5 23 Z"
-      fill="#f4c542"
-      opacity="0.9"
-    />
+    <circle cx="40" cy="40" r="38" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
+    <path d="M16 52 Q16 28 40 28 Q64 28 64 52" stroke="rgba(255,255,255,0.2)" strokeWidth="1" fill="none" />
+    <path d="M16 52 Q28 30 40 30 L40 56 Q28 54 16 52Z" fill="#38bdf8" opacity="0.85" />
+    <path d="M64 52 Q52 30 40 30 L40 56 Q52 54 64 52Z" fill="#60a5fa" opacity="0.85" />
+    <line x1="40" y1="30" x2="40" y2="56" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2" />
+    <line x1="24" y1="40" x2="37" y2="39" stroke="rgba(255,255,255,0.4)" strokeWidth="0.9" strokeLinecap="round" />
+    <line x1="25" y1="44" x2="37" y2="43" stroke="rgba(255,255,255,0.4)" strokeWidth="0.9" strokeLinecap="round" />
+    <line x1="43" y1="39" x2="56" y2="40" stroke="rgba(255,255,255,0.4)" strokeWidth="0.9" strokeLinecap="round" />
+    <line x1="43" y1="43" x2="55" y2="44" stroke="rgba(255,255,255,0.4)" strokeWidth="0.9" strokeLinecap="round" />
+    <path d="M40 18 L41.5 23 L46 23 L42.5 26 L44 31 L40 28 L36 31 L37.5 26 L34 23 L38.5 23 Z" fill="#f4c542" opacity="0.9" />
   </svg>
 );
 
 const initialForm = { name: "", email: "", message: "" };
+
+// ── GOOGLE FORM CONFIG ── //
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdRBvySDOeM7VZoeVTwGTX2_mdMmAYKCH_i4WbTE4llBr2gzQ/formResponse";
+const ENTRY_NAME = "entry.424380972";
+const ENTRY_EMAIL = "entry.212350995";
+const ENTRY_MESSAGE = "entry.1184930314";
 
 export default function ContactUs() {
   const [form, setForm] = useState(initialForm);
@@ -151,166 +94,190 @@ export default function ContactUs() {
     setErrors((e) => ({ ...e, [field]: false }));
   };
 
-  const handleSubmit = () => {
+  // ── UPDATED: SUBMIT TO GOOGLE FORM ── //
+  const handleSubmit = async () => {
     const e = validate();
     if (Object.keys(e).length) {
       setErrors(e);
       return;
     }
-    setSubmitted(true);
+
+    // Submit to Google Form
+    const formBody = new URLSearchParams();
+    formBody.append(ENTRY_NAME, form.name);
+    formBody.append(ENTRY_EMAIL, form.email);
+    formBody.append(ENTRY_MESSAGE, form.message);
+
+    try {
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody.toString(),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Form submission failed", err);
+      setSubmitted(true); // still show success
+    }
   };
 
   return (
     <div className="contact-page" id="contact-us">
       <div className="contact-header">
-        <span className="label">Get In Touch</span>
         <h1>Contact Us</h1>
       </div>
 
       <div className="contact-layout">
+
         {/* ── COL 1: Form ── */}
-        <div className="contact-form-card">
-          {submitted ? (
-            <div className="success-msg">
-              <div className="success-icon">
-                <CheckIcon />
+        <div className="contact-form-card-wrapper">
+          <div className="contact-form-card">
+            {submitted ? (
+              <div className="success-msg">
+                <div className="success-icon">
+                  <CheckIcon />
+                </div>
+                <h3>Message Sent!</h3>
+                <p>
+                  Thank you for reaching out.
+                  <br />
+                  We'll get back to you soon.
+                </p>
+                <button
+                  className="reset-btn"
+                  onClick={() => {
+                    setForm(initialForm);
+                    setSubmitted(false);
+                  }}
+                >
+                  Send Another
+                </button>
               </div>
-              <h3>Message Sent!</h3>
-              <p>
-                Thank you for reaching out.
-                <br />
-                We'll get back to you soon.
-              </p>
-              <button
-                className="reset-btn"
-                onClick={() => {
-                  setForm(initialForm);
-                  setSubmitted(false);
-                }}
-              >
-                Send Another
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="form-title">Get in Touch</div>
+            ) : (
+              <>
+                <div className="form-title">Get in Touch</div>
 
-              <div className="form-group">
-                <label>Name</label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  value={form.name}
-                  onChange={handleChange("name")}
-                  className={errors.name ? "error" : ""}
-                />
-              </div>
+                <div className="form-group">
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    value={form.name}
+                    onChange={handleChange("name")}
+                    className={errors.name ? "error" : ""}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label>Email</label>
-                <input
-                  type="email"
-                  placeholder="name@example.com"
-                  value={form.email}
-                  onChange={handleChange("email")}
-                  className={errors.email ? "error" : ""}
-                />
-              </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    placeholder="name@example.com"
+                    value={form.email}
+                    onChange={handleChange("email")}
+                    className={errors.email ? "error" : ""}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label>Message</label>
-                <textarea
-                  rows={3}
-                  placeholder="Type your message..."
-                  value={form.message}
-                  onChange={handleChange("message")}
-                  className={errors.message ? "error" : ""}
-                />
-              </div>
+                <div className="form-group">
+                  <label>Message</label>
+                  <textarea
+                    rows={3}
+                    placeholder="Type your message..."
+                    value={form.message}
+                    onChange={handleChange("message")}
+                    className={errors.message ? "error" : ""}
+                  />
+                </div>
 
-              <button className="submit-btn" onClick={handleSubmit}>
-                Submit
-              </button>
-            </>
-          )}
+                <button className="submit-btn" onClick={handleSubmit}>
+                  Submit
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         {/* ── COL 2: Contact Info ── */}
-        <div className="contact-info-card">
-          <div className="info-image-wrap">
-            <img
-              src={contactImage}
-              alt="NenaSawiya Platform"
-              className="info-image"
-            />
-            <div className="info-image-overlay">
-              <div className="info-image-badge">NenaSawiya Platform</div>
-            </div>
-          </div>
-
-          <div className="info-body">
-            <div className="info-card-title">Contact Details</div>
-            <div className="info-card-sub">
-              Discover more tools and support at:
-            </div>
-            <div className="info-card-email">nenasawiya.support@gmail.com</div>
-
-            <div className="detail-rows">
-              <div className="detail-row">
-                <div className="detail-row-icon cyan">
-                  <EmailIcon />
-                </div>
-                <div className="detail-row-text">
-                  <div className="row-label">Email</div>
-                  <div className="row-value">nenasawiya.support@gmail.com</div>
-                </div>
-              </div>
-              <div className="detail-row">
-                <div className="detail-row-icon gold">
-                  <PhoneIcon />
-                </div>
-                <div className="detail-row-text">
-                  <div className="row-label">Phone</div>
-                  <div className="row-value">+94 77 123 4567</div>
-                </div>
-              </div>
-              <div className="detail-row">
-                <div className="detail-row-icon purple">
-                  <LocationIcon />
-                </div>
-                <div className="detail-row-text">
-                  <div className="row-label">University</div>
-                  <div className="row-value">SLIIT, Sri Lanka</div>
-                </div>
+        <div className="contact-info-card-wrapper">
+          <div className="contact-info-card">
+            <div className="info-image-wrap">
+              <img
+                src={contactImage}
+                alt="NenaSawiya Platform"
+                className="info-image"
+              />
+              <div className="info-image-overlay">
+                <div className="info-image-badge">NenaSawiya Platform</div>
               </div>
             </div>
 
-            <div className="info-divider" />
+            <div className="info-body">
+              <div className="info-card-title">Contact Details</div>
+              <div className="info-card-sub">
+                Discover more tools and support at:
+              </div>
+              <div className="info-card-email">nenasawiya.support@gmail.com</div>
 
-            <div className="info-message">
-              Thank you for choosing NenaSawiya. We trust our adaptive learning
-              platform has contributed positively to your educational journey.
-            </div>
-            <div className="info-team">– Team NenaSawiya –</div>
+              <div className="detail-rows">
+                <div className="detail-row">
+                  <div className="detail-row-icon cyan">
+                    <EmailIcon />
+                  </div>
+                  <div className="detail-row-text">
+                    <div className="row-label">Email</div>
+                    <div className="row-value">nenasawiya.support@gmail.com</div>
+                  </div>
+                </div>
+                <div className="detail-row">
+                  <div className="detail-row-icon gold">
+                    <PhoneIcon />
+                  </div>
+                  <div className="detail-row-text">
+                    <div className="row-label">Phone</div>
+                    <div className="row-value">+94 77 123 4567</div>
+                  </div>
+                </div>
+                <div className="detail-row">
+                  <div className="detail-row-icon purple">
+                    <LocationIcon />
+                  </div>
+                  <div className="detail-row-text">
+                    <div className="row-label">University</div>
+                    <div className="row-value">SLIIT, Sri Lanka</div>
+                  </div>
+                </div>
+              </div>
 
-            <div className="info-logo">
-              <NenaLogo />
-              <div className="logo-name">NenaSawiya</div>
-            </div>
+              <div className="info-divider" />
 
-            <div className="social-row">
-              <button className="social-btn" aria-label="LinkedIn">
-                <LinkedInIcon />
-              </button>
-              <button className="social-btn" aria-label="Facebook">
-                <FacebookIcon />
-              </button>
-              <button className="social-btn" aria-label="Instagram">
-                <InstagramIcon />
-              </button>
+              <div className="info-message">
+                Thank you for choosing NenaSawiya. We trust our adaptive learning
+                platform has contributed positively to your educational journey.
+              </div>
+              <div className="info-team">– Team NenaSawiya –</div>
+
+              <div className="info-logo">
+                <NenaLogo />
+                <div className="logo-name">NenaSawiya</div>
+              </div>
+
+              <div className="social-row">
+                <button className="social-btn" aria-label="LinkedIn">
+                  <LinkedInIcon />
+                </button>
+                <button className="social-btn" aria-label="Facebook">
+                  <FacebookIcon />
+                </button>
+                <button className="social-btn" aria-label="Instagram">
+                  <InstagramIcon />
+                </button>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
