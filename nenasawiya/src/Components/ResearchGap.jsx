@@ -23,7 +23,7 @@ const ResearchGap = () => {
 
         <div className="grid-3">
           <div className="card">
-            <FaBrain className="card-icon" />
+            <FaBrain className="card-icon-rg" />
             <h3>Identification & Classification</h3>
             <br />
             <p>
@@ -37,7 +37,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <FaClipboardCheck className="card-icon" />
+            <FaClipboardCheck className="card-icon-rg" />
             <h3>Assessment Methods</h3>
             <br />
             <p>
@@ -50,7 +50,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <FaCogs className="card-icon" />
+            <FaCogs className="card-icon-rg" />
             <h3>Integrated Solutions</h3>
             <br />
             <p>
@@ -64,7 +64,7 @@ const ResearchGap = () => {
         <br />
         <div className="grid-3">
           <div className="card">
-            <FaLayerGroup className="card-icon" />
+            <FaLayerGroup className="card-icon-rg" />
             <h3>Multi-domain Coverage</h3><br />
             <p>
               Existing solutions do not effectively address multiple learning
@@ -75,7 +75,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <FaGlobe className="card-icon" />
+            <FaGlobe className="card-icon-rg" />
             <h3>Accessibility & Scalability</h3>
             <br />
             <p>
@@ -87,7 +87,7 @@ const ResearchGap = () => {
           </div>
 
           <div className="card">
-            <FaLanguage className="card-icon" />
+            <FaLanguage className="card-icon-rg" />
             <h3>Cultural Adaptation</h3>
             <br />
             <p>
