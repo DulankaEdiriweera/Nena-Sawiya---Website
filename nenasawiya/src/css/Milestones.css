@@ -1,0 +1,250 @@
+:root {
+  --navy: #1a3a8a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── PAGE ── */
+.milestones-page {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1a1a2e;
+  padding: 60px 20px 80px;
+}
+
+/* ── HEADER ── */
+.milestones-header {
+  max-width: none;          /* full width */
+  margin: 0 20px 40px 20px; /* small side padding, bottom margin */
+  text-align: left;          /* align to left corner */
+}
+
+.milestones-header h1 {
+  font-size: 32px;           /* match research section-title */
+  font-weight: bold;          /* bold like research */
+  color: #0b1f3a;            /* dark blue */
+  margin-bottom: 40px;       /* spacing like research */
+  border-left: 5px solid #ffcc00; /* yellow accent */
+  padding-left: 10px;        /* spacing from border */
+}
+
+.milestones-header .label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #0b1f3a;    /* match section text color */
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+}
+
+
+
+/* ── PROGRESS BAR ── */
+.progress-bar-wrap {
+  max-width: 860px;
+  margin: 0 auto 40px;
+}
+
+.progress-label {
+  font-size: 0.78rem;
+  color: #4a5568;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-track {
+  height: 8px;
+  background: #eef1ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0a0f2c, #1a3a8a, #00b4d8);
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+/* ❌ FILTERS REMOVED */
+.milestone-filters {
+  display: none;
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #0a0f2c, #1a3a8a, #00b4d8);
+  opacity: 0.35;
+}
+
+/* ── ITEMS ── */
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 36px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.milestone-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.milestone-item:nth-child(odd)  { padding-right: calc(50% + 44px); }
+.milestone-item:nth-child(even) { flex-direction: row-reverse; padding-left: calc(50% + 44px); }
+
+/* ── DOT ── */
+.milestone-dot {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--navy);
+}
+
+.milestone-dot svg { width: 15px; height: 15px; }
+
+/* ── CARD ── */
+.milestone-card {
+  border-radius: 14px;
+  flex: 1;
+  background: #ffffff;
+  position: relative;
+  cursor: default;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+
+  /* ✅ SIMPLE NAVY BORDER */
+  border: 2px solid var(--navy);
+}
+
+/* ❌ REMOVE gradient border */
+.milestone-card::before {
+  display: none;
+}
+
+.milestone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(10,15,44,0.10);
+}
+
+/* ── CARD INNER ── */
+.card-inner {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+/* ── TOP ── */
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #eef1ff;
+}
+
+.card-icon svg {
+  width: 17px;
+  height: 17px;
+  color: var(--navy);
+}
+
+/* ── DATE ── */
+.milestone-date {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-left: auto;
+  background: #eef1ff;
+  color: var(--navy);
+}
+
+/* ── TEXT ── */
+.milestone-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0a0f2c;
+  margin-bottom: 6px;
+}
+
+.milestone-desc {
+  font-size: 0.80rem;
+  color: #4a5568;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+/* ── FOOTER ── */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f0f2f8;
+  padding-top: 10px;
+}
+
+.marks-badge {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.marks-badge span {
+  color: #0a0f2c;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ❌ STATUS REMOVED */
+.status-pill {
+  display: none;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .timeline-line { left: 16px; }
+  .milestone-dot { left: 16px; }
+
+  .milestone-item:nth-child(odd),
+  .milestone-item:nth-child(even) {
+    flex-direction: row;
+    padding: 0 0 0 48px;
+  }
+}
