@@ -7,74 +7,80 @@ const presentations = [
     date: "2025/0x/xx",
     type: "Group",
     view: "https://docs.google.com/presentation/d/1SbhYRfz5fiChcecNvKDX1PZ-dzQu2bh5/preview",
-    download: "https://docs.google.com/presentation/d/1SbhYRfz5fiChcecNvKDX1PZ-dzQu2bh5/export/pptx",
+    download:
+      "https://docs.google.com/presentation/d/1SbhYRfz5fiChcecNvKDX1PZ-dzQu2bh5/export/pptx",
   },
   {
     title: "Progress Presentation 1",
     date: "2025/0x/xx",
     type: "Group",
     view: "https://docs.google.com/presentation/d/11GJWBaBP1uZl1ZrC-i2bGkmw9Qous00L/preview",
-    download: "https://docs.google.com/presentation/d/11GJWBaBP1uZl1ZrC-i2bGkmw9Qous00L/export/pptx",
+    download:
+      "https://docs.google.com/presentation/d/11GJWBaBP1uZl1ZrC-i2bGkmw9Qous00L/export/pptx",
   },
   {
     title: "Progress Presentation 2",
     date: "2025/0x/xx",
     type: "Group",
     view: "https://docs.google.com/presentation/d/1AOjeOykilXjQoYzlyMbesWXZY2zVcQGG/preview",
-    download: "https://docs.google.com/presentation/d/1AOjeOykilXjQoYzlyMbesWXZY2zVcQGG/export/pptx",
+    download:
+      "https://docs.google.com/presentation/d/1AOjeOykilXjQoYzlyMbesWXZY2zVcQGG/export/pptx",
   },
   {
     title: "Final Presentation",
     date: "2025/0x/xx",
     type: "Group",
     view: "https://docs.google.com/presentation/d/YOUR_FILE_ID_FINAL/preview",
-    download: "https://docs.google.com/presentation/d/YOUR_FILE_ID_FINAL/export/pptx",
+    download:
+      "https://docs.google.com/presentation/d/YOUR_FILE_ID_FINAL/export/pptx",
   },
 ];
 
 const Presentation = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Presentations</h1>
-      <p style={styles.subText}>
-        Please find all presentations related to this project below.
-      </p>
+    <section id="presentations" className="presentations-page">
+      <div style={styles.container}>
+        <h1 style={styles.heading}>Presentations</h1>
+        <p style={styles.subText}>
+          Please find all presentations related to this project below.
+        </p>
 
-      <div style={styles.grid}>
-        {presentations.map((item, index) => (
-          <div key={index} style={styles.card}>
-            <div style={styles.cardTop}>
-              <h3 style={styles.title}>📊 {item.title}</h3>
-              <p style={styles.date}>Submitted on {item.date}</p>
-            </div>
+        <div style={styles.grid}>
+          {presentations.map((item, index) => (
+            <div key={index} style={styles.card}>
+              <div style={styles.cardTop}>
+                <h3 style={styles.title}>{item.title}</h3>
+                <p style={styles.date}>Submitted on {item.date}</p>
+              </div>
 
-            <div style={styles.cardBottom}>
-              <span style={styles.type}>{item.type}</span>
+              <div style={styles.cardBottom}>
+                <span style={styles.type}>{item.type}</span>
 
-              <div style={styles.buttonGroup}>
-                <a
-                  href={item.view}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={styles.view}
-                >
-                  View
-                </a>
+                <div style={styles.buttonGroup}>
+                  <a
+                    href={item.view}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={styles.view}
+                  >
+                    View
+                  </a>
 
-                <a
-                  href={item.download}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={styles.download}
-                >
-                  Download
-                </a>
+                  <a
+                    href={item.download}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={styles.download}
+                  >
+                    Download
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
