@@ -23,7 +23,9 @@ const TeamMemberCard = ({
           <div className="text-group mt-2">
             <p>
               <strong>
-                {role === "Group Member" ? "Undergraduate" : "Role"}
+                {role === "Group Member" || role === "Group Leader"
+                  ? "Undergraduate"
+                  : "Role"}
               </strong>
             </p>
             <p>{university}</p>

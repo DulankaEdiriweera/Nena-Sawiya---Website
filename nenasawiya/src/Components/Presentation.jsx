@@ -1,4 +1,3 @@
-// src/pages/Presentation.jsx
 import React from "react";
 
 const presentations = [
@@ -38,47 +37,45 @@ const presentations = [
 
 const Presentation = () => {
   return (
-    <section id="presentations" className="presentations-page">
-      <div style={styles.container}>
-        <h1 style={styles.heading}>Presentations</h1>
-        <p style={styles.subText}>
-          Please find all presentations related to this project below.
-        </p>
+    <section id="presentations" style={styles.container}>
+      <h1 style={styles.heading}>Presentations</h1>
+      <p style={styles.subText}>
+        Please find all presentations related to this project below.
+      </p>
 
-        <div style={styles.grid}>
-          {presentations.map((item, index) => (
-            <div key={index} style={styles.card}>
-              <div style={styles.cardTop}>
-                <h3 style={styles.title}>{item.title}</h3>
-                <p style={styles.date}>Submitted on {item.date}</p>
-              </div>
+      <div style={styles.grid}>
+        {presentations.map((item, index) => (
+          <div key={index} style={styles.card}>
+            <div>
+              <h3 style={styles.title}>{item.title}</h3>
+              <p style={styles.date}>Submitted on {item.date}</p>
+            </div>
 
-              <div style={styles.cardBottom}>
-                <span style={styles.type}>{item.type}</span>
+            <div style={styles.bottom}>
+              <span style={styles.type}>{item.type}</span>
 
-                <div style={styles.buttonGroup}>
-                  <a
-                    href={item.view}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={styles.view}
-                  >
-                    View
-                  </a>
+              <div style={styles.buttonGroup}>
+                <a
+                  href={item.view}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={styles.button}
+                >
+                  View
+                </a>
 
-                  <a
-                    href={item.download}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={styles.download}
-                  >
-                    Download
-                  </a>
-                </div>
+                <a
+                  href={item.download}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={styles.button}
+                >
+                  Download
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -86,17 +83,20 @@ const Presentation = () => {
 
 const styles = {
   container: {
+    backgroundColor: "#ffffff",
+    color: "#0b1f3a",
     padding: "40px",
     fontFamily: "Poppins, sans-serif",
-    background: "#ffffff",
-    minHeight: "100vh",
   },
   heading: {
     fontSize: "32px",
     marginBottom: "10px",
+    borderLeft: "5px solid #ffcc00",
+    paddingLeft: "10px",
+    fontWeight: "bold",
   },
   subText: {
-    color: "#666",
+    color: "#555",
     marginBottom: "30px",
   },
   grid: {
@@ -105,16 +105,16 @@ const styles = {
     gap: "20px",
   },
   card: {
-    background: "#fff",
-    borderRadius: "10px",
-    border: "1px solid #ddd",
+    background: "#ffffff",
+    color: "#0b1f3a",
+    padding: "20px",
+    borderRadius: "20px",
+    border: "3px solid #0b1f3a", // yellow border
+    boxShadow: "0 4px 10px rgba(0,0,0,0.2)", // shadow
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     transition: "0.3s",
-  },
-  cardTop: {
-    padding: "20px",
   },
   title: {
     fontSize: "16px",
@@ -124,29 +124,27 @@ const styles = {
     fontSize: "14px",
     color: "#777",
   },
-  cardBottom: {
-    borderTop: "1px solid #eee",
-    padding: "15px 20px",
+  bottom: {
+    marginTop: "15px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   },
   type: {
     fontSize: "14px",
+    fontWeight: "bold",
   },
   buttonGroup: {
     display: "flex",
     gap: "10px",
   },
-  view: {
+  button: {
     textDecoration: "none",
-    color: "#6c63ff",
+    color: "#0b1f3a",
     fontWeight: "500",
-  },
-  download: {
-    textDecoration: "none",
-    color: "#007bff",
-    fontWeight: "500",
+    border: "1px solid #0b1f3a",
+    padding: "5px 10px",
+    borderRadius: "8px",
   },
 };
 

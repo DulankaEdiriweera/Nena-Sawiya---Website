@@ -47,52 +47,48 @@ const documents = [
 
 const Document = () => {
   return (
-    <section id="documents" className="document-page">
-      <div style={styles.container}>
-        <h1 style={styles.heading}>Documents</h1>
-        <p style={styles.subText}>
-          Please find all documents related to this project below.
-        </p>
+    <section id="documents" style={styles.container}>
+      <h1 style={styles.heading}>Documents</h1>
+      <p style={styles.subText}>
+        Please find all documents related to this project below.
+      </p>
 
-        <div style={styles.grid}>
-          {documents.map((doc, index) => (
-            <div key={index} style={styles.card}>
-              <div style={styles.cardTop}>
-                <h3 style={styles.title}>{doc.title}</h3>
-                <p style={styles.date}>Submitted on {doc.date}</p>
-              </div>
+      <div style={styles.grid}>
+        {documents.map((doc, index) => (
+          <div key={index} style={styles.card}>
+            <div>
+              <h3 style={styles.title}>{doc.title}</h3>
+              <p style={styles.date}>Submitted on {doc.date}</p>
+            </div>
 
-              <div style={styles.cardBottom}>
-                <span style={styles.type}>{doc.type}</span>
+            <div style={styles.bottom}>
+              <span style={styles.type}>{doc.type}</span>
 
-                <div>
-                  {/* View button for individual files */}
-                  {!doc.isFolder && (
-                    <a
-                      href={doc.file}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ ...styles.download, marginRight: "10px" }}
-                    >
-                      View
-                    </a>
-                  )}
-
-                  {/* Download button */}
+              <div>
+                {!doc.isFolder && (
                   <a
                     href={doc.file}
-                    {...(!doc.isFolder ? { download: true } : {})} // Only use download for files
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={styles.download}
+                    style={{ ...styles.link, marginRight: "10px" }}
                   >
-                    Download
+                    View
                   </a>
-                </div>
+                )}
+
+                <a
+                  href={doc.file}
+                  {...(!doc.isFolder ? { download: true } : {})}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={styles.link}
+                >
+                  Download
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -100,17 +96,20 @@ const Document = () => {
 
 const styles = {
   container: {
+    backgroundColor: "#ffffff",
+    color: "#0b1f3a",
     padding: "40px",
     fontFamily: "Poppins, sans-serif",
-    background: "#ffffff",
-    minHeight: "100vh",
   },
   heading: {
     fontSize: "32px",
     marginBottom: "10px",
+    borderLeft: "5px solid #ffcc00",
+    paddingLeft: "10px",
+    fontWeight: "bold",
   },
   subText: {
-    color: "#666",
+    color: "#555",
     marginBottom: "30px",
   },
   grid: {
@@ -119,16 +118,16 @@ const styles = {
     gap: "20px",
   },
   card: {
-    background: "#fff",
-    borderRadius: "10px",
-    border: "1px solid #ddd",
+    background: "#ffffff",
+    color: "#0b1f3a",
+    padding: "20px",
+    borderRadius: "20px",
+    border: "3px solid #0b1f3a", // ✅ yellow border
+    boxShadow: "0 4px 10px rgba(0,0,0,0.2)", // ✅ same shadow
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     transition: "0.3s",
-  },
-  cardTop: {
-    padding: "20px",
   },
   title: {
     fontSize: "16px",
@@ -138,21 +137,25 @@ const styles = {
     fontSize: "14px",
     color: "#777",
   },
-  cardBottom: {
-    borderTop: "1px solid #eee",
-    padding: "15px 20px",
+  bottom: {
+    marginTop: "15px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   },
   type: {
     fontSize: "14px",
-    color: "#444",
+    fontWeight: "bold",
+    color: "#0b1f3a",
   },
-  download: {
+  link: {
     textDecoration: "none",
-    color: "#007bff",
+    color: "#0b1f3a",
     fontWeight: "500",
+    border: "1px solid #0b1f3a",
+    padding: "5px 10px",
+    borderRadius: "8px",
+    transition: "0.3s",
   },
 };
 

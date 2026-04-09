@@ -18,7 +18,7 @@ const Team = () => {
         <TeamMemberCard
           name="Thisera M. H. A"
           image={Member1}
-          role="Group Member"
+          role="Group Leader"
           university="Sri Lanka Institute of Information Technology"
           department="Information Technology"
           linkedin="#"
