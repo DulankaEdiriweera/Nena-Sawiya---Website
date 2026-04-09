@@ -197,7 +197,7 @@ const milestones = [
     title: "Progress Presentation I (50%)",
     desc: "Mid-point presentation demonstrating 50% completion and addressing any design gaps.",
     marks: 15,
-    status: "active",
+    status: "done",
     icon: "present",
   },
   {
@@ -205,7 +205,7 @@ const milestones = [
     title: "Progress Presentation II (90%)",
     desc: "Near-final presentation with working prototype, demonstrating 90% project completion.",
     marks: 18,
-    status: "active",
+    status: "done",
     icon: "present",
   },
   {
@@ -249,7 +249,7 @@ const milestones = [
     icon: "web",
   },
   {
-    date: "April 2026",
+    date: "May 2026",
     title: "Research Paper",
     desc: "Academic paper documenting original contributions and findings to the knowledge base.",
     marks: 10,
