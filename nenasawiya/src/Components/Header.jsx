@@ -109,13 +109,13 @@ export default function Header() {
             <Link smooth to="#milestones" className="nav__link">
               Milestones
             </Link>
-            <Link to="/documents" className="nav__link">
+            <Link smooth to="#documents" className="nav__link">
               Documents
             </Link>
-            <Link to="/presentations" className="nav__link">
+            <Link smooth to="#presentations" className="nav__link">
               Presentations
             </Link>
-            <Link to="/achievements" className="nav__link">
+            <Link smooth to="#achievements" className="nav__link">
               Achievements
             </Link>
 
