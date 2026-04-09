@@ -42,57 +42,59 @@ const documents = [
     type: "Group",
     file: "/files/final-report.pdf",
     isFolder: false,
-  }
+  },
 ];
 
 const Document = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Documents</h1>
-      <p style={styles.subText}>
-        Please find all documents related to this project below.
-      </p>
+    <section id="documents" className="document-page">
+      <div style={styles.container}>
+        <h1 style={styles.heading}>Documents</h1>
+        <p style={styles.subText}>
+          Please find all documents related to this project below.
+        </p>
 
-      <div style={styles.grid}>
-        {documents.map((doc, index) => (
-          <div key={index} style={styles.card}>
-            <div style={styles.cardTop}>
-              <h3 style={styles.title}>{doc.title}</h3>
-              <p style={styles.date}>Submitted on {doc.date}</p>
-            </div>
+        <div style={styles.grid}>
+          {documents.map((doc, index) => (
+            <div key={index} style={styles.card}>
+              <div style={styles.cardTop}>
+                <h3 style={styles.title}>{doc.title}</h3>
+                <p style={styles.date}>Submitted on {doc.date}</p>
+              </div>
 
-            <div style={styles.cardBottom}>
-              <span style={styles.type}>{doc.type}</span>
+              <div style={styles.cardBottom}>
+                <span style={styles.type}>{doc.type}</span>
 
-              <div>
-                {/* View button for individual files */}
-                {!doc.isFolder && (
+                <div>
+                  {/* View button for individual files */}
+                  {!doc.isFolder && (
+                    <a
+                      href={doc.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ ...styles.download, marginRight: "10px" }}
+                    >
+                      View
+                    </a>
+                  )}
+
+                  {/* Download button */}
                   <a
                     href={doc.file}
+                    {...(!doc.isFolder ? { download: true } : {})} // Only use download for files
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ ...styles.download, marginRight: "10px" }}
+                    style={styles.download}
                   >
-                    View
+                    Download
                   </a>
-                )}
-
-                {/* Download button */}
-                <a
-                  href={doc.file}
-                  {...(!doc.isFolder ? { download: true } : {})} // Only use download for files
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={styles.download}
-                >
-                  Download
-                </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
