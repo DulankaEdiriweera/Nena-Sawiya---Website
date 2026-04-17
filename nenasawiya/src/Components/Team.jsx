@@ -14,15 +14,14 @@ const Team = () => {
       <h2 className="section-title">Our Team</h2>
 
       <div className="row justify-content-center">
-
         <TeamMemberCard
           name="Thisera M. H. A"
           image={Member1}
           role="Group Leader"
           university="Sri Lanka Institute of Information Technology"
           department="Information Technology"
-          linkedin="#"
-          email="#"
+          linkedin="https://www.linkedin.com/in/himashi-amaya-6644422b0/"
+          email="himashiamaya17@gmail.com "
         />
 
         {/* Add more members here */}
@@ -32,8 +31,8 @@ const Team = () => {
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
           department="Information Technology"
-          linkedin="#"
-          email="#"
+          linkedin="https://www.linkedin.com/in/chamishka-dewmini-043910338/"
+          email="chamishkakaluperuma@gmail.com "
         />
 
         <TeamMemberCard
@@ -42,8 +41,8 @@ const Team = () => {
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
           department="Information Technology"
-          linkedin="#"
-          email="#"
+          linkedin="https://www.linkedin.com/in/dulanka-ediriweera-8207512a4/"
+          email="kawminiediriweera21@gmail.com "
         />
 
         <TeamMemberCard
@@ -52,10 +51,9 @@ const Team = () => {
           role="Group Member"
           university="Sri Lanka Institute of Information Technology"
           department="Information Technology"
-          linkedin="#"
-          email="#"
+          linkedin="https://www.linkedin.com/in/dinusha-ranasinghe-54a633235/"
+          email="dinushaumayangani02@gmail.com"
         />
-
       </div>
     </div>
   );
