@@ -1,3 +1,4 @@
+// src/Components/ProjectScope.jsx
 import React from "react";
 import "../css/ProjectScope.css";
 import LiteratureReview from "./LiteratureReview";
@@ -11,22 +12,34 @@ function ProjectScope() {
   return (
     <section className="research-container">
       {/* Literature Survey */}
-      <LiteratureReview/>
+      <div id="literature-review">
+        <LiteratureReview />
+      </div>
 
       {/* Research Gap */}
-      <ResearchGap/>
+      <div id="research-gap">
+        <ResearchGap />
+      </div>
 
       {/* Research Problem */}
-      <ResearchProblem/>
+      <div id="research-problem">
+        <ResearchProblem />
+      </div>
 
       {/* Research Objectives */}
-      <ResearchObjectives/>
+      <div id="research-objectives">
+        <ResearchObjectives />
+      </div>
 
       {/* Methodology */}
-      <Methodology/>
+      <div id="methodology">
+        <Methodology />
+      </div>
 
       {/* Technologies */}
-      <Technologies/>
+      <div id="technologies">
+        <Technologies />
+      </div>
     </section>
   );
 }

@@ -10,7 +10,8 @@ const ResearchProblem = () => {
 
         <div className="grid-2">
           <div>
-            <h4 className="highlight">Research Problem</h4>
+            <h3 className="highlight">Research Problem</h3>
+            <br/>
             <p>
               Primary school children in Sri Lanka face significant challenges
               in the early detection of learning disabilities, including visual
@@ -27,7 +28,8 @@ const ResearchProblem = () => {
           </div>
 
           <div>
-            <h4 className="highlight">Solution</h4>
+            <h3 className="highlight">Solution</h3>
+            <br/>
             <p>
               To address these challenges, the proposed system, Nena Sawiya,
               introduces a web-based intelligent platform designed for early

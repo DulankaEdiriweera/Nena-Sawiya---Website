@@ -11,9 +11,10 @@ const ResearchObjectives = () => {
         <div className="timeline-container">
           <div className="timeline-row left">
             <div className="content">
-              <h4>
+              <h3>
                 Visual Discrimination and Memory Detection and Intervention
-              </h4>
+              </h3>
+              <br/>
               <p>
                 The first objective is to assess children’s ability to
                 recognize, differentiate, and recall visual elements such as
@@ -29,7 +30,8 @@ const ResearchObjectives = () => {
 
           <div className="timeline-row right">
             <div className="content">
-              <h4>Visual Closure Deficit Detection and Intervention</h4>
+              <h3>Visual Closure Deficit Detection and Intervention</h3>
+              <br/>
               <p>
                 The second objective is to evaluate children’s ability to
                 identify incomplete visual stimuli, including shapes, objects,
@@ -43,7 +45,8 @@ const ResearchObjectives = () => {
 
           <div className="timeline-row left">
             <div className="content">
-              <h4>Expressive Language Difficulty Detection and Intervention</h4>
+              <h3>Expressive Language Difficulty Detection and Intervention</h3>
+              <br/>
               <p>
                 The third objective is to evaluate children’s ability to express
                 their ideas clearly through language using storytelling tasks.
@@ -61,7 +64,8 @@ const ResearchObjectives = () => {
 
           <div className="timeline-row right">
             <div className="content">
-              <h4>Receptive Language Assessment (RLD)</h4>
+              <h3>Receptive Language Difficulty Detection and Intervention</h3>
+              <br/>
               <p>
                 The fourth objective is to evaluate children’s comprehension,
                 instruction-following, and overall understanding skills through

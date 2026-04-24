@@ -71,7 +71,8 @@
 .method-img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 3px;
   /* border: 3px solid #ffcc00; */
 }
 
@@ -206,9 +207,15 @@
 
 p {
   text-align: justify;
+  margin-bottom: 12px;
 }
 
-.card-icon {
+.method-p {
+  text-align: justify;
+  font-weight: bold;
+}
+
+.card-icon-rg {
   font-size: 40px;
   color: #0b1f3a; /* navy blue */
   margin-bottom: 10px;
