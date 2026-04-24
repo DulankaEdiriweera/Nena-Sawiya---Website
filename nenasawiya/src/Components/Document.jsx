@@ -13,34 +13,34 @@ const documents = [
     date: "2025/09/18",
     type: "Individual",
     file: "https://drive.google.com/drive/folders/1L9SD0R5jRkH-YqOGLv8IUU8puCREHSVj?usp=sharing",
-    isFolder: true,
+    isFolder: false,
   },
   {
     title: "Status Documents I",
     date: "2026/01/04",
-    type: "Individual",
-    file: "/files/status1.pdf",
+    type: "Group",
+    file: "https://drive.google.com/drive/folders/1IU-TU2Ynh3M4CjL23PVZlWEmlgNJAok9",
     isFolder: false,
   },
   {
     title: "Status Documents II",
     date: "2026/04/30",
     type: "Group",
-    file: "/files/status2.pdf",
+    file: "https://drive.google.com/drive/folders/1eqs2iRxk8SgUhwFYlGp9QqAdxhowEbzR",
     isFolder: false,
   },
   {
     title: "Research Paper",
     date: "2026/05/08",
     type: "Group",
-    file: "/files/research-paper.pdf",
+    file: "https://drive.google.com/drive/folders/10mjbf8-1fp09d3dqi4S4nEfzJfD3fz59",
     isFolder: false,
   },
   {
     title: "Final Report",
     date: "2026/05/13",
     type: "Group",
-    file: "/files/final-report.pdf",
+    file: "https://drive.google.com/drive/folders/1JVbYPYFKVPxZ2UlAs7d7BqkF8_wUtEmg",
     isFolder: false,
   },
 ];
@@ -76,7 +76,7 @@ const Document = () => {
                   </a>
                 )}
 
-                <a
+                {/* <a
                   href={doc.file}
                   {...(!doc.isFolder ? { download: true } : {})}
                   target="_blank"
@@ -84,7 +84,7 @@ const Document = () => {
                   style={styles.link}
                 >
                   Download
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
