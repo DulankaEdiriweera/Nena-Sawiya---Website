@@ -3,7 +3,7 @@ import React from "react";
 const presentations = [
   {
     title: "Proposal Presentation",
-    date: "2025/0x/xx",
+    date: "2025/09/09",
     type: "Group",
     view: "https://docs.google.com/presentation/d/1SbhYRfz5fiChcecNvKDX1PZ-dzQu2bh5/preview",
     download:
@@ -11,7 +11,7 @@ const presentations = [
   },
   {
     title: "Progress Presentation 1",
-    date: "2025/0x/xx",
+    date: "2026/01/04",
     type: "Group",
     view: "https://docs.google.com/presentation/d/11GJWBaBP1uZl1ZrC-i2bGkmw9Qous00L/preview",
     download:
@@ -19,7 +19,7 @@ const presentations = [
   },
   {
     title: "Progress Presentation 2",
-    date: "2025/0x/xx",
+    date: "2026/03/10",
     type: "Group",
     view: "https://docs.google.com/presentation/d/1AOjeOykilXjQoYzlyMbesWXZY2zVcQGG/preview",
     download:
@@ -27,7 +27,7 @@ const presentations = [
   },
   {
     title: "Final Presentation",
-    date: "2025/0x/xx",
+    date: "2025/05/04",
     type: "Group",
     view: "https://docs.google.com/presentation/d/YOUR_FILE_ID_FINAL/preview",
     download:
