@@ -6,12 +6,12 @@ const achievements = [
     id: 1,
     badge: "IEEE · SCSE",
     year: "2026",
-    title: "Research Paper Published at SCSE",
+    title: "Acceptance of the Research paper at SCSE",
     venue:
       "9th IEEE International Research Conference on Smart Computing and Systems Engineering",
     institution: "University of Kelaniya, Sri Lanka",
     description:
-      "Our research on detecting and intervening in language and visual processing disorders among Sri Lankan primary school students was accepted and published at SCSE — a premier IEEE conference indexed in Scopus and available through the IEEE Xplore Digital Library.",
+      "Our research on detecting and intervening in language and visual processing disorders among Sri Lankan primary school students was accepted and presented at SCSE — a premier IEEE conference indexed in Scopus and available through the IEEE Xplore Digital Library.",
     link: "https://scse.kln.ac.lk/",
     linkLabel: "View Conference",
     tags: ["IEEE", "Scopus Indexed", "IEEE Xplore"],
