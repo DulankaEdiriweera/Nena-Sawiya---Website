@@ -26,14 +26,14 @@ const documents = [
     title: "Status Documents II",
     date: "2026/04/30",
     type: "Group",
-    file: "https://drive.google.com/drive/folders/1eqs2iRxk8SgUhwFYlGp9QqAdxhowEbzR",
+    file: "https://docs.google.com/spreadsheets/d/18xFFi145sGVXc6Esr50Vqxu-wYboxz8m/view?usp=sharing",
     isFolder: false,
   },
   {
     title: "Research Paper",
     date: "2026/05/08",
     type: "Group",
-    file: "https://drive.google.com/drive/folders/10mjbf8-1fp09d3dqi4S4nEfzJfD3fz59",
+    file: "https://drive.google.com/file/d/1kErjGpftvrTLvudT6WmlkRcTEeFHsKOL/view?usp=sharing",
     isFolder: false,
   },
   {
