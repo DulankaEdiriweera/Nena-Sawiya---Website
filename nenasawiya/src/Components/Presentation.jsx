@@ -29,9 +29,9 @@ const presentations = [
     title: "Final Presentation",
     date: "2025/05/04",
     type: "Group",
-    view: "https://docs.google.com/presentation/d/1w5HGMaZSb5mJZEaBhcaRAoDfhUXw6IYP/preview",
+    view: "https://docs.google.com/presentation/d/1rZKhdcjh2Yg9N1V53lN8-kDWH8XumeVo/preview",
     download:
-      "https://docs.google.com/presentation/d/1w5HGMaZSb5mJZEaBhcaRAoDfhUXw6IYP/export/pptx",
+      "https://docs.google.com/presentation/d/1rZKhdcjh2Yg9N1V53lN8-kDWH8XumeVo/export/pptx",
   },
 ];
 

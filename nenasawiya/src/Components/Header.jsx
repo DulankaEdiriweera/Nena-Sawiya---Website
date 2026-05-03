@@ -25,32 +25,32 @@ const allSections = [
   // Project Scope
   {
     label: "Literature Survey",
-    to: "/scope#literature-review",
+    to: "/#literature-review",
     keywords: ["literature", "survey", "review", "papers"],
   },
   {
     label: "Research Gap",
-    to: "/scope#research-gap",
+    to: "/#research-gap",
     keywords: ["gap", "research gap", "problem area"],
   },
   {
     label: "Research Problem & Solution",
-    to: "/scope#research-problem",
+    to: "/#research-problem",
     keywords: ["problem", "solution", "research problem"],
   },
   {
     label: "Research Objectives",
-    to: "/scope#research-objectives",
+    to: "/#research-objectives",
     keywords: ["objectives", "goals", "aims"],
   },
   {
     label: "Methodology",
-    to: "/scope#methodology",
+    to: "/#methodology",
     keywords: ["methodology", "method", "approach", "process"],
   },
   {
     label: "Technologies",
-    to: "/scope#technologies",
+    to: "/#technologies",
     keywords: ["technologies", "tech", "tools", "stack", "frameworks"],
   },
 
@@ -135,12 +135,12 @@ const allSections = [
   // About
   {
     label: "Supervisors",
-    to: "/about#supervisors",
+    to: "/#supervisors",
     keywords: ["supervisors", "supervisor", "advisors", "mentors"],
   },
   {
     label: "Team Members",
-    to: "/about#team",
+    to: "/#team",
     keywords: ["team", "members", "students", "group"],
   },
 
